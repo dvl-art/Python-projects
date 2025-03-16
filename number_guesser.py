@@ -27,10 +27,9 @@ while True:
     if user_guess == random_number:
         print("You got it")
         break
-    else:
-        if user_guess > random_number:
+    elif user_guess > random_number:
             print("Your number was greater")
-        else:
+    else:
             print("Your number was less")
 print("You got it in ", guesses, "guesses")
 

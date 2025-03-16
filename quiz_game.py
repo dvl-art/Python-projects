@@ -1,46 +1,33 @@
-print("Welcome to my computer quiz!")
-playing = input("Do you want to play? ")
+print("Let's play the quize game")
+user_reply = str(input("Do you want to play the game? Shall we continue?"))
+if user_reply.lower() == "yes":
+	print("So let's start the game")
+	total_score = 0
+	answer = input("What is stand for CPU? ")
+	if answer.lower() == "central processing unit":
+		print("You are right")
+		total_score += 1
+	else:
+		print("You are wrong")
 
-if playing.lower() != "yes":
-        quit()
+	answer = input("What is stand for GPU? ")
+	if answer.lower() == "graphics processing unit":
+		print("You are right")
+		total_score += 1
+	else:
+		print("You are wrong")
 
-print("Okay! Let's Play")
-score = 0
+	answer = input("What is stand for POS? ").lower()
+	if answer == "power supply":
+		print("You are right")
+		total_score += 1
+	else:
+		print("You are wrong")
 
-answer = input("What does CPU stands for? ").lower()
-
-if answer == "central processing unit":
-        print("Correct")
-        score += 1
+	print("Your have given total right answers " + str(total_score) + " out of 3")
 else:
-        print("Incorrect")
-
-answer = input("What does GPU stand for? ").lower()
-if answer == "graphics processing unit":
-        print("Correct")
-        score += 1
-else:
-        print("Incorrect")
-
-answer = input("What does RAM stands for? ")
-if answer.lower() == "Random access memory":
-        print("Correct")
-        score += 1
-else:
-        print("Incorrect")
-
-answer = input("What does PSU stands for?")
-if answer.lower() == "power supply":
-        score += 1 
-        print("Correct")
-else:
-        print("Incorrect")
-
-print(f"You got total of {score} questions correct.")
-print("You got total of" + str(score) + "questions correct.")
-print("You got total of" + " " + str((score / 4 ) * 100) + "%." + "questions correct.")
-
-
+	print("No problem, play next time")
+	quit()
 
 
 
